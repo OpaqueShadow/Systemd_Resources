@@ -1,0 +1,2 @@
+#!/bin/bash
+echo $(systemctl status --full $1) | mail -Ssendwait -s "$1" $2

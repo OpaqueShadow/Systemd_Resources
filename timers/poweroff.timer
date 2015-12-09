@@ -1,0 +1,8 @@
+[Unit]
+Description=Shutdown on friday nights.
+
+[Timer]
+OnCalendar=friday 18:00
+
+[Install]
+WantedBy=timers.target

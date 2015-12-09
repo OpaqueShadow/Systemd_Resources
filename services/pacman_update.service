@@ -1,0 +1,10 @@
+[Unit]
+Description=pacman update service.
+OnFailure=status-email@%n.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/pacman -Syu --noconfirm
+ExecStart=/usr/local/bin/systemd-email %n howardj9@nku.edu
+User=root
+Group=systemd-journal

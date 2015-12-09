@@ -1,0 +1,8 @@
+[Unit]
+Description=Service to poweroff system
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/poweroff
+User=root
+Group=systemd-journal
