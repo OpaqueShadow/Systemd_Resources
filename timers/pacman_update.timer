@@ -1,9 +1,11 @@
 [Unit]
 Description=Run updates daily
+Wants=network-online.target
+After=network-online.target
 
 [Timer]
 OnCalendar=12:00
 Persistent=true
 
 [Install]
-WantedBy=network-online.target
+WantedBy=timers.target
